@@ -1,5 +1,6 @@
- FROM openjdk:8
-    ADD target/java-RatingService.jar java-RatingService.jar
-    ENTRYPOINT ["java", "-jar","java-RatingService.jar"]
-    EXPOSE 8080
-    ENTRYPOINT["java", "-jar","/RatingService.jar"]
+FROM openjdk:8
+EXPOSE 8080
+ADD target/RatingService.jar RatingService.jar
+ENTRYPOINT["java", "-jar","/RatingService.jar"]
+
+
